@@ -1,0 +1,51 @@
+---
+const steps = ["Build", "Break", "Investigate", "Automate", "Improve"];
+---
+
+<section id="about" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">About me</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">How I work</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-[var(--white-icon)]">
+      <div class="space-y-4">
+        <p>
+          I'm a Computer Science engineer based in Bhopal, working where offensive
+          security, research, and automation meet. I assess systems to see how they
+          fail, and build them to understand how they work.
+        </p>
+        <p>
+          Through independent consulting I've assessed web applications, APIs,
+          applications, and hardware, and turned the findings into remediation
+          guidance. Client engagements are under NDA. Outside client work, I build
+          tooling that turns fragmented security data into something you can
+          correlate, visualize, and act on.
+        </p>
+        <p>
+          I've presented research at RICCE-2024 (MANIT) and I'm pursuing a B.Tech in
+          CSE at Jagran Lakecity University.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex flex-wrap items-center gap-2">
+          {
+            steps.map((s, i) => (
+              <>
+                <span class="px-4 py-1.5 text-sm text-[var(--white)] rounded-full border border-[var(--white-icon-tr)] bg-[#1414149c]">
+                  {s}
+                </span>
+                {i < steps.length - 1 && <span class="text-[var(--sec)]">→</span>}
+              </>
+            ))
+          }
+        </div>
+        <blockquote class="border-l-2 border-[var(--sec)] pl-4 text-[var(--white)]">
+          I don't just want to find where a system breaks. I want to understand why
+          it breaks, how the weakness connects to a larger attack path, and how to
+          build something better afterward.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>

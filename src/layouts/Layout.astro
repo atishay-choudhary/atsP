@@ -1,0 +1,121 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+        <title>{title} | Cybersecurity Researcher & Security Consultant</title>
+    <meta
+      name="description"
+      content="Atishay Choudhary is a cybersecurity researcher and independent security consultant in Bhopal, India, working on offensive security, web and API security, threat intelligence, and security automation."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href="https://atishaychoudhary.cyberspatz.com/" />
+
+    <link
+      rel="preload"
+      href="/fonts/montserrat-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <meta property="og:title" content="Atishay Choudhary | Cybersecurity Researcher & Security Consultant" />
+    <meta
+      property="og:description"
+      content="Offensive security, threat intelligence, and security automation. Building tools to understand how systems break and how to fix them."
+    />
+    <meta property="og:image" content="https://atishaychoudhary.cyberspatz.com/og.image.png" />
+    <meta property="og:url" content="https://atishaychoudhary.cyberspatz.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Atishay Choudhary" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Atishay Choudhary",
+        "url": "https://atishaychoudhary.cyberspatz.com",
+        "image": "https://atishaychoudhary.cyberspatz.com/og.image.png",
+        "sameAs": [
+          "https://github.com/YOUR_GITHUB_USERNAME",
+          "https://www.linkedin.com/in/YOUR_LINKEDIN_SLUG"
+        ],
+        "jobTitle": "Cybersecurity Researcher & Independent Security Consultant",
+        "description": "Cybersecurity researcher working on offensive security, threat intelligence, and security automation.",
+        "knowsAbout": ["Penetration testing", "Web and API security", "Threat intelligence", "Security automation"]
+      }
+    </script>
+  </head>
+  <body class="bg-[--background] sm:px-28 lg:px-20 px-9">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Montserrat Variable";
+    src: url("/fonts/montserrat-latin-wght-normal.woff2")
+      format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --background: #101010;
+    --sec: #a476ff;
+    --white: #dfdfdf;
+    --white-icon: #f3f3f398;
+    --white-icon-tr: #f3f3f310;
+  }
+
+  * {
+    font-family:
+      "Montserrat Variable",
+      -apple-system,
+      system-ui,
+      sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  *::selection {
+    background-color: var(--sec);
+    color: var(--background);
+  }
+
+  /* Scrollbar styles */
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--container);
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+  }
+
+  /* Scrollbar styles for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) var(--container);
+  }
+</style>
