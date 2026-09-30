@@ -25,20 +25,28 @@ const CategoryIcons = {
 const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
-  const skills = {
-    "Web Development": [
-      "Single Page Applications (SPAs)",
-      "Landing pages and business websites",
-      "Portfolio websites",
+    const skills = {
+    "Offensive Security": [
+      "Penetration testing",
+      "Web & API security",
+      "Vulnerability assessment",
+      "Application & hardware security",
     ],
-    "Mobile Development": [
-      "Mobile-friendly web apps",
-      "React Native mobile apps",
+    "Threat Intelligence": [
+      "Threat analysis & threat modeling",
+      "Attack surface analysis",
+      "Cyber kill chain mapping",
+      "Malware analysis",
     ],
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
+    "Security Engineering": [
+      "Python security tooling & automation",
+      "Machine learning for security",
+      "Linux, Django, AWS & Azure",
+    ],
+    "Research & CTFs": [
+      "Published research (RICCE-2024, MANIT)",
+      "CTFs & security labs",
+      "Top 7% on TryHackMe",
     ],
   };
 
@@ -49,7 +57,7 @@ const SkillsList = () => {
   return (
     <div className="text-left pt-3 md:pt-9">
       <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
-        What I do?
+        What I do
       </h3>
       <ul className="space-y-4 mt-4 text-lg">
         {Object.entries(skills).map(([category, items]) => (
